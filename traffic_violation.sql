@@ -1,0 +1,2 @@
+CREATE DATABASE traffic_violation_system;
+USE traffic_violation_system;
