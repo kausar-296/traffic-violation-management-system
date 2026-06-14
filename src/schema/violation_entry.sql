@@ -1,6 +1,6 @@
 CREATE TABLE ViolationEntry(
     entry_id INT PRIMARY KEY AUTO_INCREMENT,
-    violation_datetime DATETIME,
+    violation_datetime DATETIME NOT NULL,
     vehicle_id INT NOT NULL,
     violation_id INT NOT NULL,
 

@@ -43,14 +43,6 @@ CREATE TABLE ViolationEntry(
     REFERENCES TrafficViolation(violation_id)
 );
 
--- Trigger log table
-CREATE TABLE ViolationLog(
-    log_id INT PRIMARY KEY AUTO_INCREMENT,
-    message VARCHAR(255),
-    log_time DATETIME
-);
-
--- Insert owners
 INSERT INTO VehicleOwner
 (owner_name, address, mobile_number, email, driving_license_number)
 VALUES
@@ -59,7 +51,6 @@ VALUES
 ('John Anthony','Mumbai','9878375210','john02@gmail.com','DL003'),
 ('Sabrina','Hyderabad','9876593850','rina934@gmail.com','DL004');
 
--- Insert vehicles
 INSERT INTO Vehicle
 (number_plate, vehicle_name, vehicle_model, registration_date, owner_id)
 VALUES
@@ -68,7 +59,6 @@ VALUES
 ('MH12CD4321','Pulsar','2023','2023-02-10',3),
 ('TS08XY9876','Creta','2024','2024-01-15',4);
 
--- Insert violation types
 INSERT INTO TrafficViolation
 (violation_rule, fine_amount, violation_details)
 VALUES
@@ -76,7 +66,6 @@ VALUES
 ('Signal Jump',1000,'Crossed red signal'),
 ('Over Speeding',1500,'Exceeded speed limit');
 
--- Insert violation entries
 INSERT INTO ViolationEntry
 (violation_datetime, vehicle_id, violation_id)
 VALUES
@@ -85,7 +74,6 @@ VALUES
 ('2026-06-06 09:10:00',2,3),
 ('2026-06-06 16:30:00',2,1);
 
--- Basic Queries
 SELECT * FROM VehicleOwner;
 
 SELECT * FROM Vehicle;
@@ -94,7 +82,6 @@ SELECT * FROM TrafficViolation;
 
 SELECT * FROM ViolationEntry;
 
--- View
 CREATE VIEW ViolationHistory AS
     SELECT v.number_plate, t.violation_rule, ve.violation_datetime
     FROM ViolationEntry ve, Vehicle v, TrafficViolation t

@@ -5,6 +5,7 @@ CREATE TABLE Vehicle(
     vehicle_model VARCHAR(50),
     registration_date DATE,
     owner_id INT NOT NULL,
+
     FOREIGN KEY(owner_id)
     REFERENCES VehicleOwner(owner_id)
 );
