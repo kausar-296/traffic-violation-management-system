@@ -100,6 +100,50 @@ This project supports the following United Nations Sustainable Development Goals
 
 
 
+\# Traffic Violation Management System
+
+
+
+\## ER Diagram
+
+
+
+!\[ER Diagram](screenshots/ER\_diagram.png)
+
+
+
+\## Database Tables
+
+
+
+!\[Vehicle Owner Table](screenshots/vehicle\_owner\_table.png)
+
+
+
+!\[Vehicle Table](screenshots/vehicle\_table.png)
+
+
+
+!\[Traffic Violation Table](screenshots/traffic\_violation\_table.png)
+
+
+
+!\[Violation Entry Table](screenshots/violation\_entry\_table.png)
+
+
+
+\## Violation History Output
+
+
+
+!\[Violation History Table](screenshots/violation\_history\_table.png)
+
+
+
+\---
+
+
+
 \## Database Schema
 
 
@@ -337,6 +381,4 @@ Displays:
 
 
 The Traffic Violation Management System demonstrates the application of database management concepts in solving real-world traffic monitoring problems. The project improves record management, enhances transparency, and supports road safety initiatives.
-
-
 
