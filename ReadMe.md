@@ -1,384 +1,180 @@
-\# Traffic Violation Management System
+# 🚦 Traffic Violation Management System
 
+A DBMS mini-project developed using **MySQL** to manage vehicle records, traffic violations, and violation history efficiently.
 
+---
 
-\## Overview
+## 📌 Project Overview
 
+The Traffic Violation Management System digitizes traffic record management by storing:
 
+- Vehicle owner details
+- Vehicle information
+- Traffic violation rules
+- Violation records
 
-The Traffic Violation Management System is a Database Management System (DBMS) project developed using MySQL. The system stores vehicle owner information, vehicle details, traffic violation rules, and records of traffic violations.
+The system uses relational database concepts such as:
 
+- Primary Keys
+- Foreign Keys
+- Constraints
+- Views
+- SQL Queries
 
+It also helps identify **repeat offenders** and maintain **violation history**.
 
-The project aims to digitize traffic violation management, reduce manual record keeping, and help identify repeat offenders.
+---
 
+## 🎯 Objectives
 
+- Maintain records of vehicle owners and vehicles
+- Store traffic violation rules and fines
+- Record traffic violations
+- Track repeat offenders
+- Retrieve violation history efficiently
 
-\---
+---
 
+## 🛠 Technologies Used
 
+- MySQL 8.0
+- MySQL Command Line Client
+- Visual Studio Code
+- Git
+- GitHub
 
-\## Objectives
+---
 
+## 🗄 Database Tables
 
+1. **VehicleOwner**
+2. **Vehicle**
+3. **TrafficViolation**
+4. **ViolationEntry**
 
-\* Maintain records of vehicle owners and vehicles.
+---
 
-\* Store traffic violation rules and fines.
+## 🔗 Relationships
 
-\* Record traffic violations committed by vehicles.
+- One VehicleOwner can own multiple Vehicles (**1:M**)
+- One Vehicle can have multiple Violation Entries (**1:M**)
+- One TrafficViolation can appear in multiple Violation Entries (**1:M**)
 
-\* View violation history.
+---
 
-\* Track repeat offenders.
+## 📊 Entity Relationship Diagram
 
+<p align="center">
+  <img src="screenshots/ER_diagram.png" width="900">
+</p>
 
+---
 
-\---
+## 📋 VehicleOwner Table
 
+<p align="center">
+  <img src="screenshots/vehicle_owner_table.png" width="900">
+</p>
 
+---
 
-\## Sustainable Development Goals (SDGs)
+## 🚗 Vehicle Table
 
+<p align="center">
+  <img src="screenshots/vehicle_table.png" width="900">
+</p>
 
+---
+
+## ⚠️ TrafficViolation Table
+
+<p align="center">
+  <img src="screenshots/traffic_violation_table.png" width="900">
+</p>
+
+---
+
+## 📝 ViolationEntry Table
+
+<p align="center">
+  <img src="screenshots/violation_entry_table.png" width="900">
+</p>
+
+---
+
+## 📈 Violation History View
+
+<p align="center">
+  <img src="screenshots/violation_history_table.png" width="900">
+</p>
+
+---
+
+## 💡 SQL Concepts Used
+
+- DDL (Data Definition Language)
+  - CREATE DATABASE
+  - CREATE TABLE
+
+- DML (Data Manipulation Language)
+  - INSERT
+
+- Constraints
+  - PRIMARY KEY
+  - FOREIGN KEY
+  - UNIQUE
+  - NOT NULL
+  - CHECK
+  - AUTO_INCREMENT
+
+- Views
+  - ViolationHistory
+
+- Queries
+  - SELECT
+  - GROUP BY
+  - Aggregate Functions
+
+---
+
+## 🌍 SDG Mapping
 
 This project supports the following United Nations Sustainable Development Goals (SDGs):
 
+### SDG 3: Good Health and Well-Being
+Promotes road safety by encouraging adherence to traffic regulations.
 
+### SDG 9: Industry, Innovation and Infrastructure
+Demonstrates the use of database technologies for efficient digital systems.
 
-\* \*\*SDG 3: Good Health and Well-Being\*\*
+### SDG 11: Sustainable Cities and Communities
+Contributes towards safer and smarter transportation systems.
 
+### SDG 16: Peace, Justice and Strong Institutions
+Supports transparent and reliable traffic law enforcement.
 
+---
 
-&#x20; \* Promotes road safety and reduces accidents.
+## 🔮 Future Scope
 
+- Online fine payment system
+- SMS and email notifications
+- Police dashboard
+- Mobile application integration
+- Automatic CCTV-based violation detection
+- E-challan generation
+- Analytics and reporting dashboard
 
+---
 
-\* \*\*SDG 11: Sustainable Cities and Communities\*\*
+## 👥 Team Members
 
+- Kausar Jehan (160624733156)
+- Umama Nooreen (160624733188)
 
+---
 
-&#x20; \* Contributes to safer and better-managed urban transportation.
+## 🔗 GitHub Repository
 
-
-
-\* \*\*SDG 16: Peace, Justice and Strong Institutions\*\*
-
-
-
-&#x20; \* Encourages transparent and efficient law enforcement.
-
-
-
-\* \*\*SDG 9: Industry, Innovation and Infrastructure\*\*
-
-
-
-&#x20; \* Supports digital infrastructure and smart city initiatives.
-
-
-
-\---
-
-
-
-\## Technologies Used
-
-
-
-\* MySQL 8.0
-
-\* MySQL Command Line Client
-
-\* Git \& GitHub
-
-\* Visual Studio Code
-
-
-
-\---
-
-
-
-\# Traffic Violation Management System
-
-
-
-\## ER Diagram
-
-
-
-!\[ER Diagram](screenshots/ER\_diagram.png)
-
-
-
-\## Database Tables
-
-
-
-!\[Vehicle Owner Table](screenshots/vehicle\_owner\_table.png)
-
-
-
-!\[Vehicle Table](screenshots/vehicle\_table.png)
-
-
-
-!\[Traffic Violation Table](screenshots/traffic\_violation\_table.png)
-
-
-
-!\[Violation Entry Table](screenshots/violation\_entry\_table.png)
-
-
-
-\## Violation History Output
-
-
-
-!\[Violation History Table](screenshots/violation\_history\_table.png)
-
-
-
-\---
-
-
-
-\## Database Schema
-
-
-
-\### Tables
-
-
-
-\#### VehicleOwner
-
-
-
-Stores information about vehicle owners.
-
-
-
-Attributes:
-
-
-
-\* owner\_id (Primary Key)
-
-\* owner\_name
-
-\* address
-
-\* mobile\_number
-
-\* email
-
-\* driving\_license\_number
-
-
-
-\---
-
-
-
-\#### Vehicle
-
-
-
-Stores information about vehicles.
-
-
-
-Attributes:
-
-
-
-\* vehicle\_id (Primary Key)
-
-\* number\_plate
-
-\* vehicle\_name
-
-\* vehicle\_model
-
-\* registration\_date
-
-\* owner\_id (Foreign Key)
-
-
-
-\---
-
-
-
-\#### TrafficViolation
-
-
-
-Stores traffic rules and fine amounts.
-
-
-
-Attributes:
-
-
-
-\* violation\_id (Primary Key)
-
-\* violation\_rule
-
-\* fine\_amount
-
-\* violation\_details
-
-
-
-\---
-
-
-
-\#### ViolationEntry
-
-
-
-Stores records of traffic violations.
-
-
-
-Attributes:
-
-
-
-\* entry\_id (Primary Key)
-
-\* violation\_datetime
-
-\* vehicle\_id (Foreign Key)
-
-\* violation\_id (Foreign Key)
-
-
-
-\---
-
-
-
-\## Features
-
-
-
-\* Vehicle owner management
-
-\* Vehicle registration management
-
-\* Traffic violation tracking
-
-\* Fine management
-
-\* Violation history view
-
-\* Repeat offender identification
-
-
-
-\---
-
-
-
-\## SQL Concepts Used
-
-
-
-\* DDL (CREATE DATABASE, CREATE TABLE)
-
-\* DML (INSERT)
-
-\* Constraints
-
-
-
-&#x20; \* PRIMARY KEY
-
-&#x20; \* FOREIGN KEY
-
-&#x20; \* UNIQUE
-
-&#x20; \* NOT NULL
-
-&#x20; \* CHECK
-
-\* Views
-
-\* SELECT Queries
-
-
-
-\---
-
-
-
-\## View Created
-
-
-
-\### ViolationHistory
-
-
-
-Displays:
-
-
-
-\* Vehicle number plate
-
-\* Violation rule
-
-\* Date and time of violation
-
-
-
-\---
-
-
-
-\## Future Scope
-
-
-
-\* Online fine payment system
-
-\* SMS and email notifications
-
-\* Police dashboard
-
-\* Mobile application integration
-
-\* Automatic detection using CCTV cameras
-
-
-
-\---
-
-
-
-\## Team Members
-
-
-
-\* Kausar Jehan
-
-\* Umama Nooreen
-
-
-
-\---
-
-
-
-\## Conclusion
-
-
-
-The Traffic Violation Management System demonstrates the application of database management concepts in solving real-world traffic monitoring problems. The project improves record management, enhances transparency, and supports road safety initiatives.
-
+```bash
+git clone https://github.com/kausar-296/traffic-violation-management-system.git
